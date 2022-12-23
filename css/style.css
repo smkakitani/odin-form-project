@@ -1,0 +1,8 @@
+body {
+    background-color: #211f37;
+}
+
+#background-image {
+    max-height: 500px;
+    max-width: auto;
+}
