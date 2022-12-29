@@ -1,8 +1,84 @@
 body {
     background-color: #211f37;
+    margin: 0px;
+    height: 100vh;
+
+    padding: 200px 0px 0px;
+    font-family: 'Roboto', sans-serif;
 }
 
-#background-image {
-    max-height: 500px;
-    max-width: auto;
+#main-content {
+    display: flex;
+    height: 90vh;
+}
+
+
+
+/* image */
+#background {
+    background-image: url('/images/cat-blerg.jpg');
+    background-size: 150%;
+    background-repeat: no-repeat;
+    background-position: 50% 65%;
+    
+    max-height: 800px;
+    min-width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;    
+    justify-content: space-between;
+}
+
+#background>div {
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#background>div>p {
+    color: #9ae366;
+    font-size: 4.5rem;
+    margin: 20px;
+}
+
+#background>p:last-child {
+    color: white;
+    margin: 13px 10px;
+}
+
+a:link {
+    color: white;
+}
+
+a:hover, a:focus {
+    color: #FFCD03;
+}
+
+/* form side */
+#form {
+    background-color: #9B95BD;
+    height: 800px;
+    padding-left: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.account {
+    background-color: #9ae366;
+    color: #211f37;
+    padding: 7px;
+    border-radius: 13px;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+#account a {
+    text-decoration: none;
 }

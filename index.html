@@ -4,17 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 
-    <title>DProject: Sign-Up Form</title>
+    <title>Project: Sign-Up Form</title>
 </head>
-<div id="background">
-    <img src="./images/cat-blerg.jpg" alt="A black cat showing its tongue in a cute way.">
-    Photo by <a href="https://unsplash.com/@antonnpo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anton Ponomarenko</a> on <a href="https://unsplash.com/photos/j7uVTlpwI0o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
-</div>
 
 <body>
-    
+
+    <div id="main-content">
+        <div id="background">
+            <div><p>Void's World</p>
+            </div>
+            <!-- <img id="background-image" src="./images/cat-blerg.jpg" alt="A black cat showing its tongue in a cute way."> -->
+            <p>Photo by <a href="https://unsplash.com/@antonnpo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anton Ponomarenko</a> on <a href="https://unsplash.com/photos/j7uVTlpwI0o?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+            </p>
+        </div>
+        
+        <div id="form">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
+            Sign up now to get started.</p>
+            <p>You know you want to.</p>
+
+            <form action="#">
+                <p>
+                    <legend>Let's do this!</legend>
+                    <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
+
+                    <p>
+                        <label for="first-name">First name
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="text" id="first-name" name="user-name">
+                    </p>
+
+                    <p>
+                        <label for="last-name">Last name
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="text" id="last-name" name="user-last-name">
+                    </p>
+
+                    <p>
+                        <label for="email">Email
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="email" id="email" name="user-email">
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone number</label>
+                        <input type="tel" id="phone" name="user-phone">
+                    </p>
+
+                    <p>
+                        <label for="password">Password
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="password" id="password" name="user-password">
+                    </p>
+
+                    <p>
+                        <label for="confirm-password">Confirm password
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="password" id="confirm-password" name="user-confirm-password">
+                    </p>
+                    
+                </p>
+            </form>
+
+            <div id="account">
+                <button type="button" class="account">Create Account</button>
+                <p>Already have an account? <a href="url">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
