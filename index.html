@@ -29,55 +29,54 @@
             <p>You know you want to.</p>
 
             <form action="#">
-                <p>
+                <div>
                     <legend>Let's do this!</legend>
                     <p>Required fields are followed by <strong><span aria-label="required">*</span></strong>.</p>
+                </div>
 
-                    <p>
-                        <label for="first-name">First name
-                            <strong><span aria-label="required">*</span></strong>
-                        </label>
-                        <input type="text" id="first-name" name="user-name">
-                    </p>
+                <div>
+                    <label for="first-name">First name
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input type="text" id="first-name" name="user-name">
+                </div>
+                
+                <div>
+                    <label for="last-name">Last name
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input type="text" id="last-name" name="user-last-name">
+                </div>
 
-                    <p>
-                        <label for="last-name">Last name
-                            <strong><span aria-label="required">*</span></strong>
-                        </label>
-                        <input type="text" id="last-name" name="user-last-name">
-                    </p>
+                <div>
+                    <label for="email">Email
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input type="email" id="email" name="user-email">
+                </div>
 
-                    <p>
-                        <label for="email">Email
-                            <strong><span aria-label="required">*</span></strong>
-                        </label>
-                        <input type="email" id="email" name="user-email">
-                    </p>
+                <div>
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="user-phone">
+                </div>
 
-                    <p>
-                        <label for="phone">Phone number</label>
-                        <input type="tel" id="phone" name="user-phone">
-                    </p>
+                <div>
+                    <label for="password">Password
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input type="password" id="password" name="user-password">
+                </div>
 
-                    <p>
-                        <label for="password">Password
-                            <strong><span aria-label="required">*</span></strong>
-                        </label>
-                        <input type="password" id="password" name="user-password">
-                    </p>
-
-                    <p>
-                        <label for="confirm-password">Confirm password
-                            <strong><span aria-label="required">*</span></strong>
-                        </label>
-                        <input type="password" id="confirm-password" name="user-confirm-password">
-                    </p>
-                    
-                </p>
+                <div>
+                    <label for="confirm-password">Confirm password
+                        <strong><span aria-label="required">*</span></strong>
+                    </label>
+                    <input type="password" id="confirm-password" name="user-confirm-password">
+                </div>              
             </form>
 
             <div id="account">
-                <button type="button" class="account">Create Account</button>
+                <button type="button">Create Account</button>
                 <p>Already have an account? <a href="url">Log in</a></p>
             </div>
         </div>

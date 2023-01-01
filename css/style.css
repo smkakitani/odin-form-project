@@ -1,15 +1,23 @@
-body {
-    background-color: #211f37;
-    margin: 0px;
-    height: 100vh;
+:root {
+    --main-color: #211f37;
+    --second-main-color: #9B95BD;
+    --color-green: #9ae366;
+    --color-yellow: #ffcd03;
+}
 
-    padding: 200px 0px 0px;
+
+body {
+    background-color: var(--main-color);
+    margin: 0px;
+    /* height: 100vh; */
+
+    padding-top: 200px;
     font-family: 'Roboto', sans-serif;
 }
 
 #main-content {
     display: flex;
-    height: 90vh;
+    /* height: 90vh; */
 }
 
 
@@ -30,21 +38,23 @@ body {
     justify-content: space-between;
 }
 
-#background>div {
+#background > div {
     background-color: rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     width: 100%;
     margin-top: 30px;
+    position: relative;
+    top: 500px;
 }
 
-#background>div>p {
-    color: #9ae366;
+#background > div > p {
+    color: var(--color-green);
     font-size: 4.5rem;
     margin: 20px;
 }
 
-#background>p:last-child {
+#background > p:last-child {
     color: white;
     margin: 13px 10px;
 }
@@ -54,24 +64,38 @@ a:link {
 }
 
 a:hover, a:focus {
-    color: #FFCD03;
+    color: var(--color-yellow);
 }
 
 /* form side */
-#form {
-    background-color: #9B95BD;
-    height: 800px;
+#form > * {
     padding-left: 40px;
+}
+
+#form {
+    background-color: var(--second-main-color);
+    height: 800px;
+    width: 100vw;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 10px;
 }
 
-.account {
-    background-color: #9ae366;
-    color: #211f37;
-    padding: 7px;
+#form > p {
+    /* width: max(600px); */
+    width: clamp(500px, 50%, 600px);
+    margin: 0px;
+}
+
+#account > button {
+    background-color: var(--color-green);
+    color: var(--second-main-color);
+    box-shadow: 0 0 5px 3px var(--color-green);
+
+    padding: 15px;
+    margin-bottom: 10px;
     border-radius: 13px;
     border: 0;
     font-family: 'Roboto', sans-serif;
@@ -81,4 +105,64 @@ a:hover, a:focus {
 
 #account a {
     text-decoration: none;
+}
+
+form {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: clamp(600px, 75%, 80%);
+    padding: 30px;
+    margin: 30px 0px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+form > div:not(:first-child) {
+    /* color: black; */
+    width: 45%;
+}
+
+form > div:first-child{
+    color: black;
+    min-width: 100%;
+    padding: 0px;
+}
+
+form > div > legend {
+    font-size: 1.5rem;
+}
+
+form > div > p {
+    font-size: 0.9rem;
+    margin: 0px;
+}
+
+label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding-bottom: 0.25rem;
+}
+
+input {
+    font-family: inherit;
+    font-size: 1rem;
+
+    background-color: #bab3e4;
+    box-sizing: border-box;
+    border: 1px solid var(--main-color);
+    border-radius: 4px;
+    padding: 0.25em 0.5em;
+    width: 100%;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+/* input effects */
+input:focus {
+    border: 2px solid #4e43cc/* #71a74b */;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    outline: 0px;
 }
