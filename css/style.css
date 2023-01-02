@@ -92,7 +92,8 @@ a:hover, a:focus {
 #account > button {
     background-color: var(--color-green);
     color: var(--second-main-color);
-    box-shadow: 0 0 5px 3px var(--color-green);
+    
+    cursor: pointer;
 
     padding: 15px;
     margin-bottom: 10px;
@@ -101,6 +102,11 @@ a:hover, a:focus {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     font-weight: 900;
+}
+
+button:hover {
+    background-color: var(--color-yellow);
+    box-shadow: 0 0 5px 3px #baff89;
 }
 
 #account a {
@@ -159,10 +165,38 @@ input {
     transition: 180ms box-shadow ease-in-out;
 }
 
+#incorrect {
+    display: none;
+    color: red;
+    font-size: 0.8rem;
+    float: right;
+    overflow: visible;
+}
+
 /* input effects */
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 input:focus {
-    border: 2px solid #4e43cc/* #71a74b */;
     box-sizing: border-box;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    outline: 0px;
+    outline: var(--main-color) solid 2px;
+}
+
+input:not(:focus):not(:placeholder-shown):valid {
+    box-sizing: border-box;
+    outline: 1px solid rgb(69, 69, 245);
+    border-color: rgb(69, 69, 245);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid ~ #incorrect {
+    display: inline;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    box-sizing: border-box;
+    outline: 2px solid red;
+    border-color: red;
 }
